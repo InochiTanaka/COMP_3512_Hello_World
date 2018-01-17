@@ -9,6 +9,32 @@
 int gcd(const int a, const int b)
 {
 	// Replace this line with your code (have fun!).
+
+	int bigNum = 0;
+	int smallNum = 0;
+	int biggestCommDomin = 0;
+
+	if (a > b)
+	{
+		bigNum = a;
+		smallNum = b;
+	}
+	else
+	{
+		bigNum = b;
+		smallNum = a;
+	}
+
+	while (smallNum > 0)
+	{
+		if ((bigNum % smallNum) == 0)
+		{
+			biggestCommDomin = smallNum;
+			return biggestCommDomin;
+		}
+		smallNum--;
+	}
+
 	return 0;
 }
 
@@ -19,5 +45,35 @@ int gcd(const int a, const int b)
 long long fibonacci(const int n)
 {
 	// Replace this line with your code (challenge: do this with recursion!).
-	return 0;
+
+	if (n <= 1)
+	{
+		return n;
+
+	}
+
+	return fibonacci(n - 1) + fibonacci(n - 2);
+
+	/*size_t numOfSeque = n;
+	int numA = 0;
+	int numB = 0;
+	int temp = 0;
+
+
+
+	if (numOfSeque != 0)
+	{
+	numB = 1;
+
+	while (numOfSeque > 1)
+	{
+	temp = numB;
+	numB += numA;
+	numA = temp;
+
+	numOfSeque--;
+	}
+	}
+
+	return numB;*/
 }
