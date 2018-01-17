@@ -9,7 +9,6 @@
 int gcd(const int a, const int b)
 {
 	// Replace this line with your code (have fun!).
-
 	int bigNum = 0;
 	int smallNum = 0;
 	int biggestCommDomin = 0;
